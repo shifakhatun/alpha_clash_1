@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@
                 </div> 
                 </div>
                     <!-- keyboard start-->
-                    <div id=" " class="keyboard-container">
+                    <div  class="keyboard-container">
                         <div class="flex justify-center gap-1 my-1 w-full">
                             <kbd id="q" class="kbd">q</kbd>
                             <kbd id="w" class="kbd">w</kbd>
@@ -75,11 +75,11 @@
                      <div class="flex justify-between w-1/2 border">
                           <button class="btn bg-[#894189] text-white rounded-full px-4">
                              Life <img src="images/Group 34.png" alt="">
-                           <span>1</span>
+                           <span id="current-life">5</span>
                           </button>
                           <button class="btn bg-[#2D0490] text-white rounded-full px-4">
                             score <img src="images/dollar_image.png" alt="">
-                            <span>1</span>
+                            <span id="current-score">0</span>
                           </button>
                      </div>
                     </div>   
@@ -88,13 +88,14 @@
                      <!-- playground end -->
 
                      <!-- final score start -->
-        <section class="score flex justify-center items-center min-h-screen hidden" >
+        <section id="final-score" class="score flex justify-center items-center min-h-screen hidden" >
             <div class=" text-white text-center space-y-6 bg-[#FFFFFF33] P-4 rounded-lg">
+                <h4 class="text-3xl">Game Over!</h4>
                 <h1 class="text-8xl"> 
                     <span class="font-extrabold"> Score:</span>
-                    <span class="">14</span>
+                    <span id="game-score" class="">14</span>
                 </h1>
-                <button class="btn bg">Play Again</button>
+                <button onclick="play()" class="btn bg">Play Again</button>
                 <p class="pb-4">Practice will make you a pro</p>
             </div>
         </section>
